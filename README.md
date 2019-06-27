@@ -147,6 +147,8 @@ See how we're referencing /dropbox_uploader.sh in autodropbox.py? That's a relat
 
 Here comes our friend cron!
 
+Make sure you're in the main /home/pi location. You can use `cd ..` to navigate up the file directory. Once your Terminal says `pi@raspberrypi:~ $` you are ready to dig into scheduling.
+
 `crontab -e`
 
 This is the structure of the crontab:
@@ -171,6 +173,25 @@ We're going to add a line for the BASH and for python:
 `30 */4 * * * /usr/bin/py /home/pi/autodropbox.py`
 
 Our BASH will run at 10 minutes past, every four hours; our Dropbox script will run at 30 minutes past, every four hours.
+
+###Optional but recommended: set a reboot
+
+Sometimes, things can get messed up if your Pi is just constantly running forever. Also, some USB cameras have weird compatibility issues that are solved with a simple reboot. I recommend that you add another simple script that reboots your Pi once a day before your script runs so that things are always fresh, as they say.
+
+Make a file called reboot.sh:
+
+`nano reboot.sh`
+
+Type this in the file:
+
+`sudo reboot`
+
+Hit ctrl + x to save and quit. Now, open up your crontab again with `crontab -e` and add a line that runs your reboot script once a day:
+
+`0 10 * * * /home/pi/reboot.sh`
+
+This sets it to reboot at 10:00 am every morning.
+
 
 ## 10. Here comes trouble
 
