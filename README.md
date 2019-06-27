@@ -2,6 +2,8 @@
 Programmatically generate tiny timelapse videos using a Pi and a webcam, then fling those videos into the DropBox cloud.
 This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project also incorporates [Andrea Fabrizi's Dropbox-Uploader](https://github.com/andreafabrizi/Dropbox-Uploader). It's appropriate for people who have done very little coding.
 
+![](/butterfly.gif)
+
 It was originally created to monitor a Chrysalis > Butterfly kit in a public library setting, which is why many of the file names have a butterfly theme (although I suppose it could also be post-apocalypse psychic children theme).
 
 This set of instructions are particularly suited to the following scenarios:
@@ -116,7 +118,7 @@ Visit [this page](https://github.com/andreafabrizi/Dropbox-Uploader) for the Dro
 
 ## 7. SH that Chrys
 
-Save the [chrys.sh](https://github.com/DigInitiatives/ChrysCamVids/blob/master/chrys.sh) file above to your Pi in /home/pi/timelapse. Alternatively, you can open up the Raw and then paste those into your own self-created file by using the Terminal and typing:
+Save the [chrys.sh](/chrys.sh) file above to your Pi in /home/pi/timelapse. Alternatively, you can open up the Raw and then paste those into your own self-created file by using the Terminal and typing:
 
 `nano chrys.sh`
 
@@ -133,13 +135,13 @@ A few notes:
 
  ## 8. Python that DropBox
 
- Save the [autodropbox.py](https://github.com/DigInitiatives/ChrysCamVids/blob/master/autodropbox.py) file above to your Pi in /home/pi/timelapse. Alternatively, you can open up the Raw and paste those into your own self-created file by using the Terminal and typing:
+ Save the [autodropbox.py](/autodropbox.py) file above to your Pi in /home/pi/timelapse. Alternatively, you can open up the Raw and paste those into your own self-created file by using the Terminal and typing:
 
  `nano autodropbox.py`
 
-autodropbox.py will use the paths above to fling any new video files into the cloud.
+autodropbox.py will use the paths you define in the file to fling any new video files into the cloud.
 
-See how we're referencing /dropbox_uploader.sh in the script above? That's a relative file path, which means it assumes that it will be in the same folder as your autodropbox.py script. Make it so OR change the script above to use an absolute path to the dropbox_uploader.sh location.
+See how we're referencing /dropbox_uploader.sh in autodropbox.py? That's a relative file path, which means it assumes that it will be in the same folder as your autodropbox.py script. Make it so OR change the script above to use an absolute path to the dropbox_uploader.sh location.
 
 ## 9. Automate the heck out of it
 
