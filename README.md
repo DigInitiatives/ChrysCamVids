@@ -1,6 +1,6 @@
 # ChrysCamVids
 Programmatically generate tiny timelapse videos using a Pi and a webcam, then fling those videos into the DropBox cloud.
-This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project also incorporates Andrea Fabrizi's Dropbox-Uploader. It's appropriate for people who have done very little coding.
+This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project also incorporates [Andrea Fabrizi's Dropbox-Uploader](https://github.com/andreafabrizi/Dropbox-Uploader). It's appropriate for people who have done very little coding.
 
 It was originally created to monitor a Chrysalis > Butterfly kit in a public library setting, which is why many of the file names have a butterfly theme (although I suppose it could also be post-apocalypse psychic children theme).
 
@@ -114,7 +114,7 @@ Did you know that Raspberry Pis use an ARM processor? They do! Did you know that
 
 Visit [this page](https://github.com/andreafabrizi/Dropbox-Uploader) for the Dropbox Uploader BASH script. This is where you'll need a Dropbox developer account. Follow the instructions and then come back! Make sure the dropbox_uploader.sh script is either copied into your project folder and/or that you use an absolute file path in our autodropbox.py script in step 8.
 
-## 7. BASH that Chrys
+## 7. SH that Chrys
 
 Save the [chrys.sh](https://github.com/DigInitiatives/ChrysCamVids/blob/master/chrys.sh) file above to your Pi in /home/pi/timelapse. Alternatively, you can open up the Raw and then paste those into your own self-created file by using the Terminal and typing:
 
