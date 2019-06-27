@@ -1,6 +1,8 @@
 # ChrysalisCam
 Programmatically generate tiny timelapse videos using a Pi and a webcam, then fling those videos into the DropBox cloud.
-This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project also incorporates [Andrea Fabrizi's Dropbox-Uploader](https://github.com/andreafabrizi/Dropbox-Uploader). It's appropriate for people who have done very little coding.
+This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project incorporates [Andrea Fabrizi's Dropbox-Uploader](https://github.com/andreafabrizi/Dropbox-Uploader), and is a spiritual successor to/cribs instructional format & some wordage from [Nicole He's Grow_Slow](https://github.com/nicolehe/grow_slow), without whom it probably wouldn't exist.
+
+This project is appropriate for people who have done very little coding.
 
 ![](/butterfly.gif)
 
