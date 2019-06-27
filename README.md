@@ -2,6 +2,8 @@
 Programmatically generate tiny timelapse videos using a Pi and a webcam, then fling those videos into the DropBox cloud.
 This is a guide to making automated timelapse videos using a Raspberry Pi and a webcam. This project also incorporates Andrea Fabrizi's Dropbox-Uploader. It's appropriate for people who have done very little coding.
 
+It was originally created to monitor a Chrysalis > Butterfly kit in a public library setting, which is why many of the file names have a butterfly theme (although I suppose it could also be post-apocalypse psychic children theme).
+
 This set of instructions are particularly suited to the following scenarios:
 * you want to use a Pi and a webcam to periodically create tiny programmatically generated timelapse videos
 * multiple people would like instant access to the programmatically generated videos, but it's not appropriate for said people to all have SSH access to the Pi
