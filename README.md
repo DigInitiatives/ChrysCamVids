@@ -101,7 +101,7 @@ The video should be created immediately - only 20 images means this will happen 
 
 A few things to keep in mind:
 
-* jpgedec decodes our JPEG images. Note that there's no difference between a JPG and a JPEG, but the pipeline will not work if the two extensions don't match. If all your images are .jpg instead of .jpeg, you must change every reference to JPEG to JPG in the pipeline code above.
+* jpegdec decodes our JPEG images. Note that there's no difference between a JPG and a JPEG, but the pipeline will not work if the two extensions don't match. If all your images are .jpg instead of .jpeg, you must change every reference to JPEG to JPG in the pipeline code above.
 * Fun fact: every JPG image is built in 8x8 bit blocks. Not so fun fact: if any of your images have been cropped or saved in a non-standard resolution that is not divisible by 8, the pipeline will not work. 1280x720 works great. 1270x720 does not.
 * We've asked the pipeline for a video that is compressed with a .264 codec - x264enc - and specified an MP4 container with MP4mux. MP4 works great with most services, including the Twitter API, which is why we're using it. You could change the code above to ask for an AVI file instead by changing your codecs and muxers like so:
 
@@ -137,12 +137,7 @@ A few notes:
 
 autodropbox.py will use the paths above to fling any new video files into the cloud.
 
-`import sys
-import os
-
-os.system ("./dropbox_uploader.sh -s upload /home/pi/timelapse/video/ .")`
-
-See how we're referencing dropbox_uploader.sh in the script above? That's a relative file path, which means it assumes that it will be in the same folder as your autodropbox.py script. Make it so OR change the script above to use an absolute path to the dropbox_uploader.sh location.
+See how we're referencing /dropbox_uploader.sh in the script above? That's a relative file path, which means it assumes that it will be in the same folder as your autodropbox.py script. Make it so OR change the script above to use an absolute path to the dropbox_uploader.sh location.
 
 ## 9. Automate the heck out of it
 
