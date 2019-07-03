@@ -174,7 +174,7 @@ We're going to add a line for the BASH and for python:
 
 `10 */4 * * * /bin/sh /home/pi/chrys.sh`
 
-`30 */4 * * * /usr/bin/py /home/pi/autodropbox.py`
+`30 */4 * * * /usr/bin/python /home/pi/autodropbox.py`
 
 Our BASH will run at 10 minutes past, every four hours; our Dropbox script will run at 30 minutes past, every four hours.
 
