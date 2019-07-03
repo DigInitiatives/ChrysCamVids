@@ -172,7 +172,7 @@ This is the structure of the crontab:
 
 We're going to add a line for the BASH and for python:
 
-`10 */4 * * * /bin/sh /home/pi/chrys.sh`
+`10 */4 * * * /home/pi/chrys.sh`
 
 `30 */4 * * * /usr/bin/python /home/pi/autodropbox.py`
 
