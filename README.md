@@ -92,7 +92,7 @@ We're going to run a quick test to make sure our modules work:
 `streamer -t 20 -r 0.4 -s 1280x720 -o /images/timelapse0000.jpeg`
 
 * -t 20 = the number of frames you want to capture
-* -r 0.4 = frame rate (0.4 fps or 2.5 seconds/frame)
+* -r 0.4 = frame rate (0.4 fps or 2.5 seconds/frame). If you would like a different framte rate, this can be done by calculating (desired frames per minute) % (60 seconds). If I wanted 1 image every minute, I'd calculate 1/60 = ~0.016 fps. Obvs this can be upscaled to larger units of time ie. (5 frames per hour) % (3600 seconds) = 0.0014 fps.
 * -s 1280x720 = resolution
 
 Hit enter. The camera should immediately capture a set of 20 images in /home/pi/timelapse/images.
@@ -203,4 +203,4 @@ Possible issues you might run into:
 * Folder, user, or cron permission errors. Are you using sudo when you should?
 * Absolute vs. relative file paths. Check that you're in the right directory and that your paths match exactly, including case!
 * Cron uses a different environment than the Terminal. It doesn't know the same things, so sometimes you have to alert it to the locations of things like /usr/bin/python to run a script successfully.
-* Streamer fails to "finish" with the USB camera, which means every other time, your BASH cron job will trigger but not actually do anything. *I know.* I don't have a fix for that. [This Stack Overflow suggestion](https://stackoverflow.com/questions/46253564/recording-usb-cam-on-raspberry-pi-with-ffmpeg-usb-troubleshooting) temporarily solved my webcam issues, but only for streamer and not with fswebcam. Your mileage may vary!
+* Streamer fails to "finish" with the USB camera, which means every other time, your cron job or command line will trigger but not actually do anything. *I know.* [This Stack Overflow suggestion](https://stackoverflow.com/questions/46253564/recording-usb-cam-on-raspberry-pi-with-ffmpeg-usb-troubleshooting) solved this issue for me with both streamer and fswebcam - hopefully it does for you, too.
